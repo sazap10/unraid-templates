@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>wealth-tracker</Name>
+  <Repository>ghcr.io/sazap10/wealth-tracker:latest</Repository>
+  <Registry>https://ghcr.io</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Overview>Personal net worth tracker. Tracks monthly snapshots of accounts, savings, investments, and crypto. Data is stored in a SQLite database persisted at the mapped /data path.</Overview>
+  <WebUI>http://[IP]:[PORT:5050]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/sazap10/wealth-tracker/main/public/favicon.ico</Icon>
+  <ExtraParams/>
+  <Config
+    Name="Web UI Port"
+    Target="5050"
+    Default="5050"
+    Mode="tcp"
+    Description="Port to access the web interface."
+    Type="Port"
+    Display="always"
+    Required="true"
+    Mask="false">5050</Config>
+  <Config
+    Name="Data"
+    Target="/data"
+    Default="/mnt/user/appdata/wealth-tracker"
+    Mode="rw"
+    Description="Path where the SQLite database (wealth.db) is stored. Use appdata for persistence across updates."
+    Type="Path"
+    Display="always"
+    Required="true"
+    Mask="false">/mnt/user/appdata/wealth-tracker</Config>
+</Container>
