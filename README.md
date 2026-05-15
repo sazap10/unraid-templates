@@ -2,14 +2,12 @@
 
 Personal Unraid Docker templates by sazap10.
 
-## Installing a Template
+## Installing Templates
 
-1. In the Unraid UI go to **Docker → Add Container**
-2. Paste the raw template URL into the **Template URL** field at the bottom of the page and click **Load**
-3. Adjust any settings and click **Apply**
+Copy [`sync-templates.sh`](sync-templates.sh) to the Unraid flash drive and run it, or set it up as a User Script (User Scripts plugin) triggered at array start. It fetches all XML templates from this repo into `/boot/config/plugins/community.applications/private/sazap10/` automatically — any templates added to this repo in future will be picked up on the next run.
 
 ## Templates
 
-| Template | URL | Description |
-|---|---|---|
-| wealth-tracker | `https://raw.githubusercontent.com/sazap10/unraid-templates/main/sazap10-wealth-tracker.xml` | Personal net worth tracker — monthly account snapshots with a web UI |
+| Template | Description |
+|---|---|
+| [wealth-tracker](sazap10-wealth-tracker.xml) | Personal net worth tracker — monthly account snapshots with a web UI |

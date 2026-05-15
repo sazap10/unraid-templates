@@ -21,9 +21,11 @@ Each template is an XML file following the Unraid Community Applications `Contai
 
 ## Naming Convention
 
-Template files are named `sazap10-<app-name>.xml` to namespace them under the author's username.
+Template files live in the `templates/` subdirectory and are named `sazap10-<app-name>.xml` to namespace them under the author's username.
 
 ## Adding a New Template
 
 1. Create `sazap10-<app-name>.xml` following the structure of an existing template.
 2. Add a row for it in the `README.md` templates table.
+
+`sync-templates.sh` discovers all XML files in the repo root via the GitHub API, so no changes to the script are needed when adding a template.
