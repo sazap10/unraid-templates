@@ -31,6 +31,76 @@
     Required="true"
     Mask="false">/mnt/user/appdata/wealth-tracker</Config>
   <Config
+    Name="Demo DB Path"
+    Target="DEMO_DB_PATH"
+    Default="/data/demo.db"
+    Mode=""
+    Description="Path to the demo SQLite database file inside the container. Defaults to /data/demo.db so it persists alongside the main database."
+    Type="Variable"
+    Display="always"
+    Required="false"
+    Mask="false">/data/demo.db</Config>
+  <Config
+    Name="Monzo Client ID"
+    Target="MONZO_CLIENT_ID"
+    Default=""
+    Mode=""
+    Description="Monzo Client ID for authentication."
+    Type="Variable"
+    Display="always"
+    Required="false"
+    Mask="true"></Config>
+  <Config
+    Name="Monzo Client Secret"
+    Target="MONZO_CLIENT_SECRET"
+    Default=""
+    Mode=""
+    Description="Monzo Client Secret for authentication."
+    Type="Variable"
+    Display="always"
+    Required="false"
+    Mask="true"></Config>
+  <Config
+    Name="Monzo Redirect URI"
+    Target="MONZO_REDIRECT_URI"
+    Default="http://localhost:5050/oauth/monzo/callback"
+    Mode=""
+    Description="Monzo Redirect URI for authentication."
+    Type="Variable"
+    Display="always"
+    Required="false"
+    Mask="false">http://localhost:5050/oauth/monzo/callback</Config>
+  <Config
+    Name="Trading 212 API Credentials"
+    Target="TRADING_212_API_CREDENTIALS"
+    Default=""
+    Mode=""
+    Description="Trading 212 API Credentials for authentication. Should be base64 encoded key_id:secret."
+    Type="Variable"
+    Display="always"
+    Required="false"
+    Mask="true"></Config>
+  <Config
+    Name="Bugsnag Server API Key"
+    Target="BUGSNAG_SERVER_API_KEY"
+    Default=""
+    Mode=""
+    Description="Bugsnag API key for server-side error monitoring. Leave blank to disable. Only active when NODE_ENV=production."
+    Type="Variable"
+    Display="always"
+    Required="false"
+    Mask="true"></Config>
+  <Config
+    Name="Bugsnag Browser API Key"
+    Target="BUGSNAG_BROWSER_API_KEY"
+    Default=""
+    Mode=""
+    Description="Bugsnag API key for browser-side error monitoring. Leave blank to disable. Only active when NODE_ENV=production."
+    Type="Variable"
+    Display="always"
+    Required="false"
+    Mask="true"></Config>
+  <Config
     Name="PUID"
     Target="PUID"
     Default="99"
