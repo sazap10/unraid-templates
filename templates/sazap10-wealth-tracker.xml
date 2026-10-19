@@ -81,6 +81,16 @@
     Required="false"
     Mask="true"></Config>
   <Config
+    Name="HL Import Token"
+    Target="HL_IMPORT_TOKEN"
+    Default=""
+    Mode=""
+    Description="Shared secret for the Hargreaves Lansdown userscript import (POST /api/hl/import). Generate with: openssl rand -hex 32. Leave blank to disable the endpoint."
+    Type="Variable"
+    Display="always"
+    Required="false"
+    Mask="true"></Config>
+  <Config
     Name="Bugsnag Server API Key"
     Target="BUGSNAG_SERVER_API_KEY"
     Default=""
